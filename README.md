@@ -64,22 +64,22 @@ Please see the [API docs here](./server/README.md).
 
 Your submission will be assessed based on the following key factors:
 
-### Core Functionality (50%)
+1. **Core Functionality (50%)**
 - Does the chat application work correctly?
 - Can users log in, send messages, and receive messages in real-time?
 - Does the list of online users update correctly?
 
-### Code Quality & Best Practices (25%)
+2. **Code Quality & Best Practices (25%)***
 - Is the code clean, well-structured, and maintainable?
 - Is the state management (if used) implemented correctly?
 - Are reusable components and hooks properly utilized?
 
-### Performance & Scalability (15%)
+3. **Performance & Scalability (15%)**
 - Does the application handle large message loads smoothly?
 - Does it avoid unnecessary re-renders?
 - Does it implement basic WebSocket reconnection handling?
 
-### Optional Enhancements (10%)
+4. **Optional Enhancements (10%)**
 - Are performance optimizations like `React.memo` or `useCallback` used?
 - Has the developer added tests to validate key features?
 - Is the UI clean and responsive (Tailwind, MUI, Styled Components, etc.)?
