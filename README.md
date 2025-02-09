@@ -53,11 +53,11 @@ Please see the [API docs here](./server/README.md).
 
 ## Submitting your solution
 1.  **Source Code:**  
-- Provide the link to your public GitHub repository containing all source code files for the Mini Chat App. 
-- This should include:
-	- All React and TypeScript files (for the frontend).
-	- All Node.js and WebSocket files (for the backend).
-	- Any assets, configurations, and dependencies required to run the application.
+	- Provide the link to your public GitHub repository containing all source code files for the Mini Chat App. 
+	- This should include:
+		- All React and TypeScript files (for the frontend).
+		- All Node.js and WebSocket files (for the backend).
+		- Any assets, configurations, and dependencies required to run the application.
 2.  **Live Link (Optional):**  Optionally, you can deploy the website on a hosting platform and provide the live link. This will allow the reviewers to interact with the application directly.
 
 ## Evaluation Criteria
@@ -65,21 +65,21 @@ Please see the [API docs here](./server/README.md).
 Your submission will be assessed based on the following key factors:
 
 1. **Core Functionality (50%)**
-- Does the chat application work correctly?
-- Can users log in, send messages, and receive messages in real-time?
-- Does the list of online users update correctly?
+	- Does the chat application work correctly?
+	- Can users log in, send messages, and receive messages in real-time?
+	- Does the list of online users update correctly?
 
 2. **Code Quality & Best Practices (25%)***
-- Is the code clean, well-structured, and maintainable?
-- Is the state management (if used) implemented correctly?
-- Are reusable components and hooks properly utilized?
+	- Is the code clean, well-structured, and maintainable?
+	- Is the state management (if used) implemented correctly?
+	- Are reusable components and hooks properly utilized?
 
 3. **Performance & Scalability (15%)**
-- Does the application handle large message loads smoothly?
-- Does it avoid unnecessary re-renders?
-- Does it implement basic WebSocket reconnection handling?
+	- Does the application handle large message loads smoothly?
+	- Does it avoid unnecessary re-renders?
+	- Does it implement basic WebSocket reconnection handling?
 
 4. **Optional Enhancements (10%)**
-- Are performance optimizations like `React.memo` or `useCallback` used?
-- Has the developer added tests to validate key features?
-- Is the UI clean and responsive (Tailwind, MUI, Styled Components, etc.)?
+	- Are performance optimizations like `React.memo` or `useCallback` used?
+	- Has the developer added tests to validate key features?
+	- Is the UI clean and responsive (Tailwind, MUI, Styled Components, etc.)?
