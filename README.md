@@ -1,15 +1,11 @@
 # Chat Assignment
 
-⚠️ **Fork this repository** instead of downloading it. This allows you to track your progress and submit your work easily.
-
-1. **Fork the Repository**
-   Click the **"Fork"** button at the top right of this GitHub repo.
-2. **Clone Your Forked Repo**
+1. **Clone the Repository**
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/nx-chat-assignment.git
+   git clone https://github.com/nmeowt/nx-chat-assignment.git
    cd nx-chat-assignment
    ```
-3. **Install Dependencies**
+2. **Install Dependencies**
 
    ```bash
    pnpm install
