@@ -71,8 +71,6 @@ Your submission will be assessed based on the following key factors:
 - Does the chat history persist when the page is refreshed?
 - Is the UI/UX user-friendly, visually appealing, and intuitive to use?
 
-💡 _A clean and well-structured chat interface enhances the user experience and is a key factor in the evaluation._
-
 ### **2. Code Quality & Best Practices (20%)**
 
 - Is the code **clean, well-structured, and maintainable**?
@@ -84,5 +82,3 @@ Your submission will be assessed based on the following key factors:
 - Has the developer implemented basic styling for a user-friendly UI?
 - Are there performance optimizations (e.g., avoiding unnecessary re-renders with React.memo, useCallback)?
 - Has the developer added basic tests (if any) to validate core features?
-
-🚀 **Now, the evaluation criteria better reflect the importance of both functionality and user experience!**
