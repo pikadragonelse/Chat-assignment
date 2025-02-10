@@ -138,7 +138,7 @@ Event:
 user:login
 ```
 Payload:
-```json
+```text
 john_doe
 ```
 Sample Response:
