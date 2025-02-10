@@ -15,21 +15,3 @@ export type ChatMessage = {
 };
 
 export type ChatHistory = ChatMessage[];
-
-export type FormattedChatMessage = {
-  id: string;
-  senderId: string;
-  receiverId: string;
-  message: string;
-  timestamp: string;
-  isSender: boolean;
-};
-
-export type FormattedChatHistory = FormattedChatMessage[];
-
-export type TypingStatus = {
-  userId: string;
-  username: string;
-  receiverId: string;
-  isTyping: boolean;
-};
