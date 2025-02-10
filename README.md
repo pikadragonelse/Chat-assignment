@@ -20,31 +20,25 @@ Click the **"Fork"** button at the top right of this GitHub repo.
 
 ## **Description:**
 
-The goal of this assignment is to build a **simple real-time chat application**.
+Build a **simple 1-on-1 chat application** that allows users to **send and receive messages** in real-time.
 
 -   **Simulated login** (just enter a username, no authentication required).
--   **Send & receive messages in real-time** (using WebSocket or API polling).
--   **Display the list of online users**.
--   **Show chat history** (store in local state or mock API).
--   **Show new message notifications** (if the user is in another tab).
+-   **Send & receive messages in real-time (1-on-1 chat only).**
+-   **Show previous messages between two users** when the page is refreshed.
 
 ## **Requirements:**
 
 -   The app must have a **simple, user-friendly UI**.
 -   WebSocket should be implemented correctly to **update messages in real-time**.
--   Show **previous messages (chat history)** when a user refreshes or reopens the app.
+-   Show **previous messages between two users** when a user refreshes or reopens the app.
 -   When a user sends a message, **other users should receive it instantly**.
--   If a user **disconnects (closes the app), the online users list should update**.
 
 ## **Optional Features (Bonus Points)**:
-
+- Use **any styling approach** (or none). Options: Tailwind, MUI, Styled Components, etc.
+-  Write **a couple of tests**—2 or 3 should be enough. No need for full test coverage.
 -  **Performance Optimization:**
 	-   Use **React.memo, useCallback** to prevent unnecessary re-renders.
 	-   Efficient state management with **Zustand or Redux Toolkit**.
-- **Handle Network Issues & Connection Loss:**
-	- If the WebSocket connection is lost, show **"Reconnecting..."** and attempt to reconnect.
-- Use **any styling approach** (or none). Options: Tailwind, MUI, Styled Components, etc.
--  Write **a couple of tests**—2 or 3 should be enough. No need for full test coverage.
 
 ## Server / API
 The server application is available at http://localhost:4000/api when you run `pnpm start`.
@@ -64,22 +58,17 @@ Please see the [API docs here](./server/README.md).
 
 Your submission will be assessed based on the following key factors:
 
-1. **Core Functionality (50%)**
+1. **Core Functionality (70%)**
 	- Does the chat application work correctly?
 	- Can users log in, send messages, and receive messages in real-time?
-	- Does the list of online users update correctly?
+	- Does the chat history persist when the page is refreshed?
 
-2. **Code Quality & Best Practices (25%)***
-	- Is the code clean, well-structured, and maintainable?
-	- Is the state management (if used) implemented correctly?
-	- Are reusable components and hooks properly utilized?
+2. **Code Quality & Best Practices (20%)**
+	- Is the code **clean, well-structured, and maintainable**?
+	-   Are **React best practices** followed (component reusability, separation of concerns, proper state handling)?
+	-   Are asynchronous calls (API requests, WebSocket events) **handled correctly**?
 
-3. **Performance & Scalability (15%)**
-	- Does the application handle large message loads smoothly?
-	- Does it avoid unnecessary re-renders?
-	- Does it implement basic WebSocket reconnection handling?
-
-4. **Optional Enhancements (10%)**
-	- Are performance optimizations like `React.memo` or `useCallback` used?
-	- Has the developer added tests to validate key features?
-	- Is the UI clean and responsive (Tailwind, MUI, Styled Components, etc.)?
+3. **Optional Enhancements (10%)**
+	- Has the developer implemented basic styling for a user-friendly UI?
+	- Are there performance optimizations (e.g., avoiding unnecessary re-renders with React.memo, useCallback)?
+	- Has the developer added basic tests (if any) to validate core features?
