@@ -54,21 +54,26 @@ Please see the [API docs here](./server/README.md).
 		- Any assets, configurations, and dependencies required to run the application.
 2.  **Live Link (Optional):**  Optionally, you can deploy the website on a hosting platform and provide the live link. This will allow the reviewers to interact with the application directly.
 
-## Evaluation Criteria
 
-Your submission will be assessed based on the following key factors:
+## **Evaluation Criteria**  
+Your submission will be assessed based on the following key factors:  
 
-1. **Core Functionality (70%)**
-	- Does the chat application work correctly?
-	- Can users log in, send messages, and receive messages in real-time?
-	- Does the chat history persist when the page is refreshed?
+### **1. Core Functionality (70%)**  
+- Does the chat application work correctly?  
+- Can users log in, send messages, and receive messages in real-time?  
+- Does the chat history persist when the page is refreshed?  
+- Is the UI/UX user-friendly, visually appealing, and intuitive to use?  
 
-2. **Code Quality & Best Practices (20%)**
-	- Is the code **clean, well-structured, and maintainable**?
-	-   Are **React best practices** followed (component reusability, separation of concerns, proper state handling)?
-	-   Are asynchronous calls (API requests, WebSocket events) **handled correctly**?
+💡 *A clean and well-structured chat interface enhances the user experience and is a key factor in the evaluation.*
 
-3. **Optional Enhancements (10%)**
-	- Has the developer implemented basic styling for a user-friendly UI?
-	- Are there performance optimizations (e.g., avoiding unnecessary re-renders with React.memo, useCallback)?
-	- Has the developer added basic tests (if any) to validate core features?
+### **2. Code Quality & Best Practices (20%)**  
+- Is the code **clean, well-structured, and maintainable**?  
+- Are **React best practices** followed (component reusability, separation of concerns, proper state handling)?  
+- Are asynchronous calls (API requests, WebSocket events) **handled correctly**?  
+
+### **3. Optional Enhancements (10%)**  
+- Has the developer implemented basic styling for a user-friendly UI?  
+- Are there performance optimizations (e.g., avoiding unnecessary re-renders with React.memo, useCallback)?  
+- Has the developer added basic tests (if any) to validate core features?  
+
+🚀 **Now, the evaluation criteria better reflect the importance of both functionality and user experience!**
