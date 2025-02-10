@@ -215,6 +215,8 @@ Errors
 }
 ```
 
+---
+
 ### **Send Message (1-1 Chat)**
 
 Event:
@@ -285,6 +287,8 @@ Errors:
 }
 ```
 
+---
+
 ### **Receive Message**
 
 Event:
@@ -314,6 +318,8 @@ Sample Response:
 }
 ```
 
+---
+
 ### **User Disconnect**
 
 Event:
@@ -330,6 +336,8 @@ Sample Response:
   "data": []
 }
 ```
+
+---
 
 # Summary of API Endpoints
 
