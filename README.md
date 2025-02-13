@@ -61,6 +61,10 @@ Build a **simple 1-on-1 chat application** that allows users to **send and recei
    - The backend is already provided, so candidates only need to implement the frontend.
 2. **Live Link (Optional):** Optionally, you can deploy the website on a hosting platform and provide the live link. This will allow the reviewers to interact with the application directly.
 
+### **Using AI Tools (Encouraged!)**
+
+We encourage you to leverage AI tools (e.g., GitHub Copilot, ChatGPT, Tabnine) to improve efficiency, code quality, and problem-solving. However, ensure that you **understand and can explain** all the code you submit.
+
 ## **Evaluation Criteria**
 
 Your submission will be assessed based on the following key factors:
