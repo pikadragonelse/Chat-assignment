@@ -19,11 +19,20 @@
 
 ## **Description:**
 
-Build a **simple 1-on-1 chat application** that allows users to **send and receive messages** in real-time.
+Build a **simple 1-on-1 chat application** that allows users to **send and receive messages in real-time**.
+
+### **Core Features**
 
 - **Simulated login** (just enter a username, no authentication required).
-- **Send & receive messages in real-time (1-on-1 chat only).**
-- **Show previous messages between two users** when the page is refreshed.
+- **See a list of online users and start a chat.**
+- **Send & receive messages in real-time using Socket.io.**
+- **Show previous messages between two users when the page is refreshed.**
+
+### **Optional (Bonus)**
+
+- **Basic UI styling** with Tailwind, MUI, or any other approach.
+- **Auto-scroll to the latest message.**
+- **Smooth animations when sending & receiving messages.**
 
 ## **Requirements:**
 
@@ -35,31 +44,33 @@ Build a **simple 1-on-1 chat application** that allows users to **send and recei
 - Ensure **good UI/UX design**:
   - Messages should be **easily readable** with distinct styling for sender & receiver.
   - The chat input should be **intuitive to use**, with proper focus handling.
-  - The UI should be **visually appealing** and follow basic design principles (spacing, colors, typography).
 
 ## **Optional Features (Bonus Points):**
 
 - Use **any styling approach** (or none). Options: Tailwind, MUI, Styled Components, etc.
 - Write **a couple of tests**—2 or 3 should be enough. No need for full test coverage.
-- **Performance Optimization:**
-  - Use **React.memo, useCallback** to prevent unnecessary re-renders.
-  - Efficient state management using **React Context, Zustand, or Redux Toolkit**, depending on the complexity of the app.
+- **State Management (Optional, if needed):**
+  - Use **React Context, Zustand, or Redux Toolkit** if managing chat state becomes complex (e.g., handling active conversations, message caching).
 
 ## **Server / API**
 
-- The server application is available at http://localhost:4000/api when you run `pnpm start`.
+- The server application is available at `http://localhost:4000/api` when you run `pnpm start`.
 - **Real-time communication is powered by [Socket.io](https://socket.io/), and the frontend must connect to this server using Socket.io (not WebSocket API).**
 - Please see the [API docs here](./server/README.md).
 
-## Submitting your solution
+## **Submitting Your Solution**
 
 1. **Source Code:**
-   - Provide the link to your **public GitHub repository** containing all source code files for the **frontend of the Chat App**.
-   - This should include:
+
+   - Provide a public GitHub repository with all frontend source code.
+   - Your submission should include:
      - All **React and TypeScript files** (for the frontend).
      - Any **assets, configurations, and dependencies** required to run the application.
    - The backend is already provided, so candidates only need to implement the frontend.
-2. **Live Link (Optional):** Optionally, you can deploy the website on a hosting platform and provide the live link. This will allow the reviewers to interact with the application directly.
+
+2. **Live Link (Optional):**
+   - You can deploy the website on a hosting platform (e.g., Vercel, Netlify) and provide the live link.
+   - This allows reviewers to test your application directly.
 
 ### **Using AI Tools (Encouraged!)**
 
@@ -89,6 +100,6 @@ Your submission will be assessed based on the following key factors:
 
 ### **3. Optional Enhancements (10%)**
 
-- Has the developer implemented bonus UI/UX improvements, such as smooth animations, auto-scrolling to new messages, or additional user-friendly interactions?
-- Are there performance optimizations (e.g., avoiding unnecessary re-renders with React.memo, useCallback)?
+- Has the developer added basic styling to ensure messages are easy to read and distinguish?
+- Has the developer added auto-scroll or smooth animations to improve user experience?
 - Has the developer added basic tests (if any) to validate core features?
