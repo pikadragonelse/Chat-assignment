@@ -2,7 +2,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/nmeowt/nx-chat-assignment.git
+   git clone https://github.com/kamilabs-ai/nx-chat-assignment.git
    cd nx-chat-assignment
    ```
 2. **Install Dependencies**
