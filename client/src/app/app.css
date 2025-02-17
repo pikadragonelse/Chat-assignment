@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+    --color-primary: #009e84;
+    --color-secondary: #e8faf7;
+    --color-dark-primary: #004d40;
+}
+
 html {
     height: 100%;
 }
@@ -11,3 +17,4 @@ body {
 #root {
     height: 100%;
 }
+

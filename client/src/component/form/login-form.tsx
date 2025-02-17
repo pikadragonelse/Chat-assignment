@@ -15,7 +15,10 @@ export const LoginForm = () => {
       <h1 className="text-xl font-medium text-center mb-4">Login</h1>
       <Form>
         <Item<FormField> name="username">
-          <Input placeholder="Username" prefix={<FontAwesomeIcon icon={faUser} size="sm" />} />
+          <Input
+            placeholder="Username"
+            prefix={<FontAwesomeIcon icon={faUser} size="sm" className="mr-1" />}
+          />
         </Item>
         <Item>
           <Button htmlType="submit" className="w-full" type="primary">

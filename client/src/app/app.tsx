@@ -5,6 +5,7 @@ import { ConfigProvider } from 'antd';
 import './app.css';
 import { LoginPage } from '../page/login-page';
 import { HomePage } from '../page/home-page';
+import { NotFoundPage } from '../page/not-found-page';
 
 export function App() {
   return (
@@ -26,7 +27,8 @@ export function App() {
         <BrowserRouter>
           <Routes>
             <Route path="" element={<LoginPage />} />
-            <Route path="home/:userId" element={<HomePage />} />
+            <Route path="home/:userId/chatbox/:friendId" element={<HomePage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </StyleProvider>
