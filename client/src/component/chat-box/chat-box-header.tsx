@@ -1,15 +1,18 @@
 import DEFAULT_AVT from '../../assets/default-avt.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faPhone, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { Tooltip } from 'antd';
 
 export type ChatBoxHeader = { userId?: string; friendName?: string; onBack?: () => void };
 export const ChatBoxHeader = ({ userId, friendName, onBack }: ChatBoxHeader) => {
   return (
     <div className="h-16 flex justify-between p-2 w-full items-center  top-0 z-50 bg-white border-b border-zinc-200 border-solid  ">
       <div className="flex gap-4 items-center">
-        <div className="cursor-pointer mt-2" onClick={onBack}>
-          <FontAwesomeIcon icon={faChevronLeft} className="text-primary text-xl mt-[2px]" />
-        </div>
+        <Tooltip title="Back" placement="right" arrow={false}>
+          <div className="cursor-pointer mt-2" onClick={onBack}>
+            <FontAwesomeIcon icon={faChevronLeft} className="text-primary text-xl mt-[2px]" />
+          </div>
+        </Tooltip>
         <div className="flex gap-2 items-center">
           <div className="relative">
             <div className="w-10 h-10 min-w-10 min-h-10 rounded-full overflow-hidden ">
