@@ -1,10 +1,17 @@
 {
   "files": [],
-  "include": [],
+  "include": ["src", "__mocks__"],
   "references": [
     {
       "path": "./tsconfig.app.json"
     }
   ],
-  "extends": "../tsconfig.base.json"
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "resolveJsonModule": true,
+    "lib": ["ESNext", "DOM"]
+  }
 }
