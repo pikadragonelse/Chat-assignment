@@ -1,18 +1,23 @@
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Col, Form, Input, InputRef, Row } from 'antd';
+import { Col, Form, Input, InputRef, Row } from 'antd';
 import { useForm } from 'antd/es/form/Form';
+import { PayloadSendMessage } from '../../model/message';
 import clsx from 'clsx';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { useReceiverStore } from '../../store/receiverStore';
+import { useUserStore } from '../../store/userStore';
 
 type FormField = {
   message: string;
 };
 
-export const ChatBoxFooter = () => {
+export type ChatBoxFooter = { onSubmit?: (data: PayloadSendMessage) => void };
+export const ChatBoxFooter = ({ onSubmit = () => {} }: ChatBoxFooter) => {
   const [form] = useForm();
   const inputRef = useRef<InputRef>(null);
-  const [isRendering, setIsRendering] = useState(false);
+  const receiverState = useReceiverStore((state) => state.receiverState);
+  const userState = useUserStore((state) => state.userState);
 
   useEffect(() => {
     if (inputRef.current != null) {
@@ -24,31 +29,33 @@ export const ChatBoxFooter = () => {
     <Form
       form={form}
       onFinish={(data: FormField) => {
-        // chatbot(data.query || '');
+        const payload: PayloadSendMessage = {
+          message: data.message,
+          receiver: receiverState,
+          sender: userState,
+        };
+        form.setFieldValue('message', '');
+        onSubmit(payload);
       }}
     >
       <Row align={'middle'}>
         <Col className="flex-1">
           <Form.Item<FormField> name={'message'} noStyle>
-            <Input placeholder="Type message" ref={inputRef} />
+            <Input placeholder="Type message" ref={inputRef} autoComplete="off" />
           </Form.Item>
         </Col>
         <Col>
           <Form.Item noStyle>
             <div
-              onClick={() => (isRendering ? undefined : form.submit())}
+              onClick={() => form.submit()}
+              data-testid="send-message-btn"
               className={clsx(
                 'hover:bg-zinc-100 p-2 flex justify-center rounded-lg cursor-pointer active:bg-zinc-200 group',
-                {
-                  'cursor-default': isRendering,
-                },
               )}
             >
               <FontAwesomeIcon
                 icon={faPaperPlane}
-                className={clsx('text-primary text-lg group-active:text-dark-primary select-none', {
-                  'text-zinc-500 group-active-zinc-500': isRendering,
-                })}
+                className={clsx('text-primary text-lg group-active:text-dark-primary select-none')}
               />
             </div>
           </Form.Item>

@@ -1,6 +1,5 @@
 import { User } from '@nx-chat-assignment/shared-models';
 import { Server, Socket } from 'socket.io';
-import { AuthService } from '../services/auth.service';
 import { MessagesService } from '../services/messages.service';
 import { UsersService } from '../services/users.service';
 
@@ -10,22 +9,13 @@ export const ChatSocket = (io: Server) => {
   io.on('connection', (socket: Socket) => {
     console.log(`✅ User connected: ${socket.id}`);
 
-    socket.on('user:login', (username: string) => {
-      const user = AuthService.login(username);
-
-      if (!user) {
-        socket.emit('error', { event: 'user:login', message: 'Username is already taken' });
-        return;
-      }
-
+    socket.on('user:login', (user: User) => {
       socket.data.user = user;
       userSockets[user.id] = socket.id;
-
       io.emit('usersOnline', { event: 'usersOnline', data: UsersService.getOnlineUsers() });
     });
 
-    socket.on('message:send', ({ receiver, message }) => {
-      const sender: User = socket.data.user;
+    socket.on('message:send', ({ receiver, message, sender }) => {
       if (!sender) {
         socket.emit('error', { event: 'message:send', message: 'User not logged in' });
         return;
@@ -49,22 +39,19 @@ export const ChatSocket = (io: Server) => {
       socket.emit('message:receive', { event: 'message:receive', data: chatMessage });
 
       const receiverSocketId = userSockets[receiver.id];
+      console.log(receiverSocketId);
+
       if (receiverSocketId) {
         io.to(receiverSocketId).emit('message:receive', {
-          event: 'message:receive',
+          event: 'message:receive' + receiver.username,
           data: chatMessage,
         });
       }
     });
 
-    socket.on('disconnect', () => {
-      const user: User = socket.data.user;
-
-      if (user) {
-        AuthService.logout(user.id);
-        delete userSockets[user.id];
-        io.emit('usersOnline', { event: 'usersOnline', data: UsersService.getOnlineUsers() });
-      }
+    socket.on('user:logout', (user: User) => {
+      delete userSockets[user.id];
+      io.emit('usersOnline', { event: 'usersOnline', data: UsersService.getOnlineUsers() });
     });
   });
 };
