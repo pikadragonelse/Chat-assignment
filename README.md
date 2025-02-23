@@ -19,7 +19,7 @@
     ```
 
 ## Usage Instructions
-# Note: Test chatting by anonymous browser because I am using cookies to maintain user login.
+### Note: Test chatting by anonymous browser because I am using cookies to maintain user login.
 
 1.  **Enter a username and press "Login" or the Enter key.**
 
